@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="{{ asset('asserts/css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('asserts/js/bootstrap.js') }}"></script>
     <script src="{{ asset('asserts/js/app.js') }}"></script>
     <title>Laravel</title>
 
@@ -23,8 +24,8 @@
     </style>
 </head>
 
-<body class="antialiased bg-dark">
-    <div class = "container">
+<body class="antialiased text-light bg-dark">
+    <div class="container bg-red-800">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-5">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Bharadwaj Varanasi (Sunny)</a>
@@ -57,10 +58,40 @@
             </div>
         </nav>
     </div>
-    <div class="container-fluid custombg">
-        <div class="container">
-             <h1> This is about me</h1>
-             <p>This is my website and gonna show my details</p>
+
+    <div class="container-fluid custombg mt-5">
+        <div class="container py-5">
+            <h1 class="text-light fw-bold"> This is about me</h1>
+            <p class="text-light subhead fs-7  mb-0">This is my website and gonna show my details</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="card col-sm">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card col-sm" >
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card col-sm">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
         </div>
     </div>
 </body>
