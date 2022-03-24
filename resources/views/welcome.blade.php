@@ -57,6 +57,12 @@
             </div>
         </nav>
     </div>
+    <div class="container-fluid">
+        <div class="container">
+             <h1> This is about me</h1>
+             <p>This is my website and gonna show my details</p>
+        </div>
+    </div>
 </body>
 
 </html>
