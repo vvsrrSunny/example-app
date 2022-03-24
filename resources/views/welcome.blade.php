@@ -71,25 +71,25 @@
             <div class="card col-sm">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">My personal projects</h5>
+                    <p class="card-text text-dark">My personal projects include my website, algorithms and good softwares.</p>
+                    <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
             </div>
             <div class="card col-sm" >
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">My work in companies</h5>
+                    <p class="card-text text-dark">This shows my experience in all the companies and my work there.</p>
+                    <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
             </div>
             <div class="card col-sm">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text text-dark">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">My hobbies</h5>
+                    <p class="card-text text-dark">My hobbies include table tennis, cricket, chess and kabaddi.</p>
+                    <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
             </div>
         </div>
