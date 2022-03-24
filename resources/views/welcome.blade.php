@@ -67,27 +67,29 @@
     </div>
 
     <div class="container">
-        <div class="row mt-5">
+        <div class="row mt-5 gap-4">
             <div class="card col-sm">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">My personal projects</h5>
+                    <h5 class="card-title text-dark">My personal projects</h5>
                     <p class="card-text text-dark">My personal projects include my website, algorithms and good softwares.</p>
                     <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
             </div>
-            <div class="card col-sm" >
+
+            <div class="card col-sm">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">My work in companies</h5>
+                    <h5 class="card-title text-dark">My work in companies</h5>
                     <p class="card-text text-dark">This shows my experience in all the companies and my work there.</p>
                     <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
             </div>
+
             <div class="card col-sm">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="{{resource_path('images/career.jpeg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">My hobbies</h5>
+                    <h5 class="card-title text-dark">My hobbies</h5>
                     <p class="card-text text-dark">My hobbies include table tennis, cricket, chess and kabaddi.</p>
                     <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
