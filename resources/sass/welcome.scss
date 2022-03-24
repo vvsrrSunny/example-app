@@ -302,3 +302,8 @@ video {
         color: rgba(107, 114, 128, var(--tw-text-opacity));
     }
 }
+
+.custombg {
+    background: black url('http://127.0.0.1:8000/images/background.jpeg');
+    background-size: cover;
+}
