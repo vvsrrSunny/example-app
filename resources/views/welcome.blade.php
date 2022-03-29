@@ -25,7 +25,7 @@
 </head>
 
 <body class="antialiased text-light bg-dark">
-    <div class="container bg-red-800">
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-5">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Bharadwaj Varanasi (Sunny)</a>
@@ -68,29 +68,29 @@
 
     <div class="container">
         <div class="row mt-5 gap-4">
-            <div class="card col-sm">
+            <div class="card col-sm bg-gray-900">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title text-dark">My personal projects</h5>
-                    <p class="card-text text-dark">My personal projects include my website, algorithms and good softwares.</p>
+                    <h5 class="card-title text-light">My personal projects</h5>
+                    <p class="card-text text-light">My personal projects include my website, algorithms and good softwares.</p>
                     <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
             </div>
 
-            <div class="card col-sm">
+            <div class="card col-sm bg-gray-900">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title text-dark">My work in companies</h5>
-                    <p class="card-text text-dark">This shows my experience in all the companies and my work there.</p>
+                    <h5 class="card-title text-light">My work in companies</h5>
+                    <p class="card-text text-light">This shows my experience in all the companies and my work there.</p>
                     <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
             </div>
 
-            <div class="card col-sm">
+            <div class="card col-sm bg-gray-900">
                 <img src="{{resource_path('images/career.jpeg')}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title text-dark">My hobbies</h5>
-                    <p class="card-text text-dark">My hobbies include table tennis, cricket, chess and kabaddi.</p>
+                    <h5 class="card-title text-light">My hobbies</h5>
+                    <p class="card-text text-light">My hobbies include table tennis, cricket, chess and kabaddi.</p>
                     <a href="#" class="btn btn-primary">Want to know more</a>
                 </div>
             </div>
