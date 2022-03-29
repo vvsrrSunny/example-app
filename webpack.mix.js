@@ -14,3 +14,9 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/asserts/js')
     .js('resources/js/bootstrap.js', 'public/asserts/js')
     .sass('resources/sass/app.scss', 'public/asserts/css');
+
+
+/*
+| Copy our plugin files to the public folder
+*/
+mix.copyDirectory('resources/images', 'public/images');

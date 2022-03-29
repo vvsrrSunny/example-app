@@ -69,7 +69,7 @@
     <div class="container">
         <div class="row mt-5 gap-4">
             <div class="card col-sm bg-gray-900">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="{{URL::to('/')}}\images\career.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-light">My personal projects</h5>
                     <p class="card-text text-light">My personal projects include my website, algorithms and good softwares.</p>
@@ -78,7 +78,7 @@
             </div>
 
             <div class="card col-sm bg-gray-900">
-                <img src="..." class="card-img-top" alt="...">
+                <img src="{{URL::to('/')}}\images\career.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-light">My work in companies</h5>
                     <p class="card-text text-light">This shows my experience in all the companies and my work there.</p>
@@ -87,7 +87,7 @@
             </div>
 
             <div class="card col-sm bg-gray-900">
-                <img src="{{resource_path('images/career.jpeg')}}" class="card-img-top" alt="...">
+                <img src="{{URL::to('/')}}\images\career.jpeg"  alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-light">My hobbies</h5>
                     <p class="card-text text-light">My hobbies include table tennis, cricket, chess and kabaddi.</p>
