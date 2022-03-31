@@ -37,9 +37,11 @@
                         <li class="nav-item col">
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
+
                         <li class="nav-item col-md-auto">
                             <a class="nav-link" href="#">My Current Work</a>
                         </li>
+
                         <li class="nav-item dropdown col">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Experience
@@ -50,6 +52,7 @@
                                 <li><a class="dropdown-item" href="#">Kony</a></li>
                             </ul>
                         </li>
+
                         <li class="nav-item col">
                             <a class="nav-link" href="#">About</a>
                         </li>
@@ -69,7 +72,8 @@
     <div class="container my-cards">
         <div class="row mt-5 gap-4">
             <div class="card col-sm bg-gray-900">
-                <img src="{{URL::to('/')}}\images\personal-project.jpg" class="card-img-top" style="object-fit: cover; max-height: 218px;" alt="...">
+                <img src="{{URL::to('/')}}\images\personal-project.jpg" class="card-img-top" alt="...">
+
                 <div class="card-body">
                     <h5 class="card-title text-light">My personal projects</h5>
                     <p class="card-text text-light">My personal projects include my website, algorithms and good softwares.</p>
@@ -78,7 +82,8 @@
             </div>
 
             <div class="card col-sm bg-gray-900">
-                <img src="{{URL::to('/')}}\images\career.jpeg" class="card-img-top" style="object-fit: cover; max-height: 218px;" alt="...">
+                <img src="{{URL::to('/')}}\images\career.jpeg" class="card-img-top" alt="...">
+
                 <div class="card-body">
                     <h5 class="card-title text-light">My work in companies</h5>
                     <p class="card-text text-light">This shows my experience in all the companies and my work there.</p>
@@ -87,7 +92,7 @@
             </div>
 
             <div class="card col-sm bg-gray-900">
-                <img src="{{URL::to('/')}}\images\career.jpeg"  style="object-fit: cover; max-height: 218px;" alt="...">
+                <img src="{{URL::to('/')}}\images\hobbies.jpg" alt="...">
                 <div class="card-body">
                     <h5 class="card-title text-light">My hobbies</h5>
                     <p class="card-text text-light">My hobbies include table tennis, cricket, chess and kabaddi.</p>

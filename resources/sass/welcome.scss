@@ -1,5 +1,29 @@
 .custombg {
-    background: black url('../images/background.jpeg');
+    background: black url("../images/background.jpeg");
     background-size: cover;
 }
 
+.my-cards {
+    & > .row {
+        & > .card.col-sm {
+            & > img {
+                @media (min-width: 576px) {
+                    object-fit: cover;
+                    max-height: 127px;
+                }
+                @media (min-width: 768px) {
+                    object-fit: cover;
+                    max-height: 127px;
+                }
+                @media (min-width: 992px) {
+                    object-fit: cover;
+                    max-height: 179px;
+                }
+                @media (min-width: 1200px) {
+                    object-fit: cover;
+                    max-height: 218px;
+                }
+            }
+        }
+    }
+}
