@@ -1,30 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ asset('asserts/css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('asserts/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('asserts/js/app.js') }}"></script>
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <style>
-
-    </style>
-
-    <style>
-        body {
-            font-family: 'Nunito', sans-serif;
-        }
-    </style>
-</head>
-
-<body class="antialiased text-light bg-dark">
+<x-layouts.app>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark m-5">
             <div class="container-fluid">
@@ -72,7 +47,7 @@
 
         <div class="container my-cards">
             <div class="row mt-5 gap-4">
-                <div class="card col-sm bg-gray-900">
+                <div class="card col-sm bg-gray-100">
                     <img src="{{URL::to('/')}}\images\personal-project.jpg" class="card-img-top" alt="...">
 
                     <div class="card-body">
@@ -103,6 +78,4 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>
+</x-layouts.app>
