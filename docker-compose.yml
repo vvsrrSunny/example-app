@@ -6,6 +6,12 @@ networks:
 
 services:
     nginx:
+        image: nginx:stable-alpine
+        container_name: nginx
+        port:
+            - 8088:80
+        volumes:
+            - .:/var/www/l9-with-sass
         depends_on:
             - php
             - mysql
