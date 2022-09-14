@@ -27,3 +27,17 @@
         }
     }
 }
+
+.nav-tabs {
+    &  .nav-link {
+        background-color: none;
+        border-color: none;
+        &.active {
+            background-color: none;
+            border-color: none;
+        }
+    }
+    & .nav-link.active {
+        background-color: none;
+    }
+}
