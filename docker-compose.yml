@@ -6,6 +6,9 @@ networks:
 
 services:
     nginx:
+        depends_on:
+            - php
+            - mysql
         networks:
             - laravel
 
