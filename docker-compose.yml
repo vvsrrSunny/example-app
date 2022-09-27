@@ -3,7 +3,6 @@ version: "3.9"
 networks:
     laravel:
 
-
 services:
     nginx:
         image: nginx:stable-alpine
@@ -16,7 +15,7 @@ services:
             - php
             - mysql
         networks:
-            - laravel
+            - laravel 
 
     mysql:
         image: mysql:5.7.22
