@@ -8,7 +8,7 @@ services:
     nginx:
         image: nginx:stable-alpine
         container_name: nginx
-        port:
+        ports:
             - 8088:80
         volumes:
             - .:/var/www/l9-with-sass
@@ -25,6 +25,7 @@ services:
         tty: true
         ports:
             - '4306:3306'
+        volumes:
             - ./mysql:/var/lib/mysql
         networks:
             - laravel
