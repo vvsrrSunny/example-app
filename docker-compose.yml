@@ -11,6 +11,7 @@ services:
             - 8088:80
         volumes:
             - ./:/var/www/l9-with-sass
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
         depends_on:
             - php
             - mysql
