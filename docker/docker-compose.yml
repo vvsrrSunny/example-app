@@ -46,6 +46,27 @@ services:
         ports:
             - 9000:9000
         volumes:
-            - ..:/var/www/html
+            - ../:/var/www/html
         networks:
             - laravel
+
+    composer:
+        image: composer:latest
+        container_name: composer
+        volumes:
+            - ../:/var/www/html
+        working_dir: /var/www/html
+        networks:
+            - laravel
+
+    npm:
+        image: node:latest
+        container_name: npm
+        volumes:
+            - ../:/var/www/html
+        working_dir: /var/www/html
+        entrypoint: ['npm']
+        networks:
+            - laravel
+
+
