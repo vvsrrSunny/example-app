@@ -28,12 +28,18 @@ services:
         volumes:
             - ./mysql:/var/lib/mysql
         environment:
-            MYSQL_USERNAME: root
-            MYSQL_PASSWORD: root
-            MYSQL_ROOT_PASSWORD: root
-            SERVICE_TAGS: dev
-            SERVICE_NAME: mysql
-            MYSQL_DATABASE: homestead
+            # MYSQL_DATABASE: homestead
+            # MYSQL_USER: root
+            # MYSQL_PASSWORD: root
+            # MYSQL_ROOT_PASSWORD: root
+            # SERVICE_TAGS: dev
+            # SERVICE_NAME: mysql
+            DB_CONNECTION: mysql
+            DB_HOST: mysql
+            DB_PORT: 3306
+            DB_DATABASE: homestead
+            DB_USERNAME: root
+            DB_PASSWORD: root
         command: --default-authentication-plugin=mysql_native_password
         networks:
             - laravel
@@ -65,8 +71,23 @@ services:
         volumes:
             - ../:/var/www/html
         working_dir: /var/www/html
-        # writes npm before our command 
+        # writes npm before our command. So, instead `docker-compose -rm npm npm install` we can go for `docker-compose -rm npm install`
         entrypoint: ['npm']
+        networks:
+            - laravel
+
+    artisan:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: artisan
+        volumes:
+            - ../:/var/www/html
+        depends_on:
+            - mysql
+        working_dir: /var/www/html
+        # writes /var/www/html/artisan before our command
+        entrypoint: ['/var/www/html/artisan']
         networks:
             - laravel
 
