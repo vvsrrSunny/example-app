@@ -65,6 +65,7 @@ services:
         volumes:
             - ../:/var/www/html
         working_dir: /var/www/html
+        # writes npm before our command 
         entrypoint: ['npm']
         networks:
             - laravel
