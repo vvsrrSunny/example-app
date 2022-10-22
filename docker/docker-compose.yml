@@ -68,7 +68,7 @@ services:
         working_dir: /var/www/html
         # writes npm before our command. So, instead `docker-compose -rm npm npm install` we can go for `docker-compose -rm npm install`
         # entrypoint: ['npm']
-        # this command will not make the npm container stop and we can run the commands in the command line. 
+        # this command will not make the npm container stop and we can run the commands in the command line.
         command: tail -f /dev/null
         networks:
             - laravel
