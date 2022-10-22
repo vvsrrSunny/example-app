@@ -24,7 +24,7 @@ services:
         restart: unless-stopped
         tty: true
         ports:
-            - 4306:3306
+            - 3306:3306
         volumes:
             - ./mysql:/var/lib/mysql
         environment:
@@ -84,8 +84,8 @@ services:
         container_name: artisan
         volumes:
             - ../:/var/www/html
-        depends_on:
-            - mysql
+        # depends_on:
+        #     - mysql
         working_dir: /var/www/html
         # writes /var/www/html/artisan before our command
         entrypoint: ['/var/www/html/artisan']
