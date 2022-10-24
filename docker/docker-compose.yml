@@ -19,21 +19,21 @@ services:
             - laravel
 
     mysql:
-        image: mysql:5.7.22
+        image: mysql:latest
         container_name: mysql
         restart: unless-stopped
         tty: true
         ports:
-            - 4306:3306
+            - 3306:3306
         volumes:
             - ./mysql:/var/lib/mysql
         environment:
-            MYSQL_USERNAME: root
+            MYSQL_DATABASE: homestead
+            MYSQL_USER_NAME: root
             MYSQL_PASSWORD: root
             MYSQL_ROOT_PASSWORD: root
             SERVICE_TAGS: dev
             SERVICE_NAME: mysql
-            MYSQL_DATABASE: homestead
         command: --default-authentication-plugin=mysql_native_password
         networks:
             - laravel
@@ -46,6 +46,47 @@ services:
         ports:
             - 9000:9000
         volumes:
-            - ..:/var/www/html
+            - ../:/var/www/html
         networks:
             - laravel
+
+    composer:
+        image: composer:latest
+        container_name: composer
+        volumes:
+            - ../:/var/www/html
+        working_dir: /var/www/html
+        networks:
+            - laravel
+
+    npm:
+        image: node:latest
+        container_name: npm
+        volumes:
+            - ../:/var/www/html
+        working_dir: /var/www/html
+        # writes npm before our command. So, instead `docker-compose -rm npm npm install` we can go for `docker-compose -rm npm install`
+        entrypoint: ['npm']
+        # this command will not make the npm container stop and we can run the commands in the command line.
+        # command: tail -f /dev/null
+        networks:
+            - laravel
+
+    artisan:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: artisan
+        volumes:
+            - ../:/var/www/html
+        tty: true
+        depends_on:
+            - mysql
+        working_dir: /var/www/html
+        # writes /var/www/html/artisan before our command but providing error here 
+        # entrypoint: ['/var/www/html/artisan']
+        # command: tail -f /dev/null
+        networks:
+            - laravel
+
+
