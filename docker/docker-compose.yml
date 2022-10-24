@@ -81,11 +81,11 @@ services:
         volumes:
             - ../:/var/www/html
         tty: true
-        # depends_on:
-        #     - mysql
+        depends_on:
+            - mysql
         working_dir: /var/www/html
         # writes /var/www/html/artisan before our command
-        entrypoint: ['/var/www/html/artisan']
+        # entrypoint: ['/var/www/html/artisan']
         # command: tail -f /dev/null
         networks:
             - laravel
