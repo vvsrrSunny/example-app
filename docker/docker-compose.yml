@@ -83,7 +83,7 @@ services:
         depends_on:
             - mysql
         working_dir: /var/www/html
-        # writes /var/www/html/artisan before our command
+        # writes /var/www/html/artisan before our command but providing error here 
         # entrypoint: ['/var/www/html/artisan']
         # command: tail -f /dev/null
         networks:
