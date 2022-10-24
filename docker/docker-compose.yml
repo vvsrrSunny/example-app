@@ -47,7 +47,6 @@ services:
             - 9000:9000
         volumes:
             - ../:/var/www/html
-            # - ../docker/php.init:/usr/local/etc/php/php.ini
         networks:
             - laravel
 
