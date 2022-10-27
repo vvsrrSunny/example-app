@@ -11,7 +11,7 @@ services:
         ports:
             - 8088:80
         volumes:
-            - ../:/var/www/html
+            - ../:/var/www/l9-with-sass
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
         depends_on:
             - php
@@ -47,7 +47,7 @@ services:
         ports:
             - 9000:9000
         volumes:
-            - ../:/var/www/html
+            - ../:/var/www/l9-with-sass
         networks:
             - laravel
 
@@ -55,8 +55,8 @@ services:
         image: composer:latest
         container_name: composer
         volumes:
-            - ../:/var/www/html
-        working_dir: /var/www/html
+            - ../:/var/www/l9-with-sass
+        working_dir: /var/www/l9-with-sass
         networks:
             - laravel
 
@@ -64,8 +64,8 @@ services:
         image: node:latest
         container_name: npm
         volumes:
-            - ../:/var/www/html
-        working_dir: /var/www/html
+            - ../:/var/www/l9-with-sass
+        working_dir: /var/www/l9-with-sass
         # writes npm before our command. So, instead `docker-compose run --rm npm npm install` we can go for `docker-compose run --rm npm install`
         entrypoint: [ "npm" ]
         # this command will not make the npm container stop and we can run the commands in the command line.
@@ -79,10 +79,10 @@ services:
             dockerfile: Dockerfile
         container_name: artisan
         volumes:
-            - ../:/var/www/html
+            - ../:/var/www/l9-with-sass
         depends_on:
             - mysql
-        working_dir: /var/www/html
+        working_dir: /var/www/l9-with-sass
         command:
             - bash
             - -c
@@ -91,7 +91,7 @@ services:
                 php artisan migrate
                 php artisan db:seed
                 tail -f /dev/null
-        # entrypoint: ["/var/www/html/artisan"]
+        # entrypoint: ["/var/www/l9-with-sass/artisan"]
         # this command will make the container run forever
         # command: tail -f /dev/null
         networks:
