@@ -3,6 +3,7 @@ version: "3.9"
 networks:
     laravel:
 
+
 services:
     nginx:
         image: nginx:stable-alpine
@@ -25,7 +26,7 @@ services:
         tty: true
         ports:
             - 3306:3306
-        # volumes:
+            # volumes:
             # - ./mysql:/var/lib/mysql
         environment:
             MYSQL_DATABASE: homestead
@@ -66,7 +67,7 @@ services:
             - ../:/var/www/html
         working_dir: /var/www/html
         # writes npm before our command. So, instead `docker-compose -rm npm npm install` we can go for `docker-compose -rm npm install`
-        entrypoint: ["npm"]
+        entrypoint: [ "npm" ]
         # this command will not make the npm container stop and we can run the commands in the command line.
         # command: tail -f /dev/null
         networks:
@@ -82,7 +83,14 @@ services:
         depends_on:
             - mysql
         working_dir: /var/www/html
-        command: php artisan migrate
+        command:
+            - bash
+            - -c
+            - |
+                php artisan optimize
+                php artisan migrate
+                php artisan db:seed
+                tail -f /dev/null
         # entrypoint: ["/var/www/html/artisan"]
         # command: tail -f /dev/null
         networks:
