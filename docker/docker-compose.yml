@@ -57,6 +57,7 @@ services:
         volumes:
             - ../:/var/www/l9-with-sass
         working_dir: /var/www/l9-with-sass
+        # command: composer install
         networks:
             - laravel
 
@@ -70,6 +71,10 @@ services:
         entrypoint: [ "npm" ]
         # this command will not make the npm container stop and we can run the commands in the command line.
         # command: tail -f /dev/null
+        # add this command if there is no entry point
+        # command: npm install
+        # keep this command to install npm dependencies if entry point is
+        command: install
         networks:
             - laravel
 
@@ -82,6 +87,7 @@ services:
             - ../:/var/www/l9-with-sass
         depends_on:
             - mysql
+            - composer
         working_dir: /var/www/l9-with-sass
         command:
             - bash
