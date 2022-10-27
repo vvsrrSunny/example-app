@@ -92,6 +92,7 @@ services:
                 php artisan db:seed
                 tail -f /dev/null
         # entrypoint: ["/var/www/html/artisan"]
+        # this command will make the container run forever
         # command: tail -f /dev/null
         networks:
             - laravel
