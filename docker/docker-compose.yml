@@ -94,7 +94,7 @@ services:
             - mysql
             - composer
         working_dir: /var/www/l9-with-sass
-        entrypoint: php /var/www/l9-with-sass/artisan
+        entrypoint: php artisan
         # this command will make the container run forever
         # command: tail -f /dev/null
         networks:
