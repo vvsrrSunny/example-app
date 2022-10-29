@@ -94,15 +94,20 @@ services:
             - mysql
             - composer
         working_dir: /var/www/l9-with-sass
-        # command:
-        #     - bash
-        #     - -c
-        #     - |
-        #         php artisan optimize
-        #         php artisan migrate
-        #         php artisan db:seed
+        command:
+            - bash
+            - -c
+            - |
+                php artisan optimize
+                php artisan migrate
+                php artisan db:seed
+                tail -f /dev/null
+
         # entrypoint: ["/var/www/l9-with-sass/artisan"]
         # this command will make the container run forever
         # command: tail -f /dev/null
         networks:
             - laravel
+
+
+
