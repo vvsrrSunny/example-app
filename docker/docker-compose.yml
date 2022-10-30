@@ -59,9 +59,10 @@ services:
         depends_on:
             - php
         working_dir: /var/www/l9-with-sass
+         # writes npm before our command. So, instead `docker-compose run --rm composer composer install` we can go for `docker-compose run --rm composer install`
         entrypoint: composer
         command: install
-        # command: composer install
+        # this command will make the composer run for ever.
         # command: tail -f /dev/null
         networks:
             - laravel
@@ -74,10 +75,6 @@ services:
         working_dir: /var/www/l9-with-sass
         # writes npm before our command. So, instead `docker-compose run --rm npm npm install` we can go for `docker-compose run --rm npm install`
         entrypoint: npm
-        # this command will not make the npm container stop and we can run the commands in the command line.
-        # command: tail -f /dev/null
-        # add this command if there is no entry point
-        # command: npm install
         # keep this command to install npm dependencies if entry point is
         command: install
         networks:
@@ -95,8 +92,6 @@ services:
             - composer
         working_dir: /var/www/l9-with-sass
         entrypoint: php artisan
-        # this command will make the container run forever
-        # command: tail -f /dev/null
         networks:
             - laravel
 
