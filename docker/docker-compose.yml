@@ -26,6 +26,7 @@ services:
         tty: true
         ports:
             - 3306:3306
+            # unblock this comment if you wat your mysql to be persisted (I recommnent to use seeders to set the data for dev)
             # volumes:
             # - ./mysql:/var/lib/mysql
         environment:
