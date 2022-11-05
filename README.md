@@ -5,17 +5,18 @@
 * [Setup](#setup)
 
 ## General info
-This project migrates the business data provided in CSV to the database tables and presents it to the users with an interactive UI. Users can also apply multiple filters on to the table and get an interesting and valuable data. 
+This project has two objectives. One is to serve as a prsonal website and other, this project is properly dockerized. This project can be futher developed with out any installations. Just installing docker is enough, we can have access to `npm`, `artisan` and `composer` commands using containers.  
 	
 ## Technologies
 Project is created with:
-* tailwind CSS: 3X
-* laravel: 9X
+* bootstrap: 5.1.3
+* sass: 1.49.9
+* laravel: 9.2
 * php: 8.0.9
 * Mysql: latest (we used docker container)
 
 ## Prerequisites
-* Docker  
+* Docker (install docker)  
 
 ## Setup
 To run this project:
