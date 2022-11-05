@@ -5,7 +5,7 @@
 * [Setup](#setup)
 
 ## General info
-This project has two objectives. One is to serve as a prsonal website and other, this project is properly dockerized. This project can be futher developed with out any installations. Just installing docker is enough, we can have access to `npm`, `artisan` and `composer` commands using containers.  
+This project has two objectives. One is to serve as a prsonal website and other, this project is properly dockerized. The other is this project can be futher developed with out any installations. Just installing docker is enough, we can have access to `npm`, `artisan` and `composer` commands using containers.  
 	
 ## Technologies
 Project is created with:
